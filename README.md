@@ -4,6 +4,7 @@ A project by:
 - Vedant Vardhaan
 - Ishaan Gosain
 
+
 ## Introduction
 
 Power outages can have significant economic and social impacts, affecting households, businesses, and essential services. Understanding the underlying causes of outages is crucial for improving power grid reliability and enabling quicker response times.
@@ -14,6 +15,8 @@ The focus of this project is on the following question:
 **"Developing a machine learning model that can predict outage causes based on real-time factors."**
 
 This predictive capability could help power companies anticipate issues, allocate resources more effectively, and minimize disruption.
+
+
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -57,4 +60,15 @@ The raw dataset required multiple preprocessing steps to ensure it was structure
   - `"restoration_timestamp"`
 
 - The original **date and time columns** were dropped to avoid redundancy.
+
+The first few rows of our DataFrame `outage` look like this:
+
+| year | state     | nerc | climate_region       | climate_category | anomaly_level | cause            | cause_detail    | duration | demand_loss | customers_affected | outage_start_timestamp   | restoration_timestamp    |
+|------|----------|------|----------------------|------------------|---------------|------------------|----------------|----------|-------------|--------------------|--------------------------|-------------------------|
+| 2011 | Minnesota | MRO  | East North Central  | normal           | -0.3          | severe weather   | NaN            | 3060     | NaN         | 70000              | 2011-07-01 17:00:00      | 2011-07-03 20:00:00     |
+| 2014 | Minnesota | MRO  | East North Central  | normal           | -0.1          | intentional attack | vandalism      | 1        | NaN         | NaN                | 2014-05-11 18:38:00      | 2014-05-11 18:39:00     |
+| 2010 | Minnesota | MRO  | East North Central  | cold             | -1.5          | severe weather   | heavy wind     | 3000     | NaN         | 70000              | 2010-10-26 20:00:00      | 2010-10-28 22:00:00     |
+| 2012 | Minnesota | MRO  | East North Central  | normal           | -0.1          | severe weather   | thunderstorm   | 2550     | NaN         | 68200              | 2012-06-19 04:30:00      | 2012-06-20 23:00:00     |
+| 2015 | Minnesota | MRO  | East North Central  | warm             | 1.2           | severe weather   | NaN            | 1740     | 250.0       | 250000             | 2015-07-18 02:00:00      | 2015-07-19 07:00:00     |
+
 
