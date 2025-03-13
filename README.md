@@ -38,7 +38,7 @@ This predictive capability could help power companies anticipate issues, allocat
 
 
 
-## Data Cleaning and Exploratory Data Analysis
+## Data Cleaning
 
 
 The raw dataset required multiple preprocessing steps to ensure it was structured correctly for analysis. Below is a breakdown of the key data cleaning steps performed:
@@ -90,5 +90,16 @@ The first few rows of our DataFrame `outage` look like this:
 | 2010 | Minnesota | MRO  | East North Central  | cold             | -1.5          | severe weather   | heavy wind     | 3000     | NaN         | 70000              | 2010-10-26 20:00:00      | 2010-10-28 22:00:00     |
 | 2012 | Minnesota | MRO  | East North Central  | normal           | -0.1          | severe weather   | thunderstorm   | 2550     | NaN         | 68200              | 2012-06-19 04:30:00      | 2012-06-20 23:00:00     |
 | 2015 | Minnesota | MRO  | East North Central  | warm             | 1.2           | severe weather   | NaN            | 1740     | 250.0       | 250000             | 2015-07-18 02:00:00      | 2015-07-19 07:00:00     |
+
+## Exploratory Data Analysis
+
+### Univariate Analysis
+
+1. Frequency of Power Outages Across Climate Regions  
+
+The bar chart illustrates the frequency of power outages across different climate regions, providing insight into how often outages occur in each area. The height of each bar represents the number of recorded outage events, making it easy to compare the distribution across regions. Regions with higher frequencies may experience more frequent extreme weather conditions, such as hurricanes, heavy snowfall, or heatwaves, which could contribute to power disruptions. Conversely, regions with lower frequencies may have more stable climates or resilient infrastructure.  
+
+This visualization helps identify potential trends in power outages based on climate conditions. If certain regions show significantly higher outage counts, it may indicate vulnerabilities in infrastructure or more severe weather impacts in those areas. Understanding these patterns can aid in improving outage preparedness, infrastructure resilience, and policy decisions for mitigating climate-related disruptions.  
+
 
 
