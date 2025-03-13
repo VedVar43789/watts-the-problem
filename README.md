@@ -99,7 +99,7 @@ The first few rows of our DataFrame `outage` look like this:
 
 The bar chart illustrates the frequency of power outages across different climate regions, providing insight into how often outages occur in each area. The height of each bar represents the number of recorded outage events, making it easy to compare the distribution across regions. Regions with higher frequencies may experience more frequent extreme weather conditions, such as hurricanes, heavy snowfall, or heatwaves, which could contribute to power disruptions. Conversely, regions with lower frequencies may have more stable climates or resilient infrastructure.  
 
-This visualization helps identify potential trends in power outages based on climate conditions. If certain regions show significantly higher outage counts, it may indicate vulnerabilities in infrastructure or more severe weather impacts in those areas. Understanding these patterns can aid in improving outage preparedness, infrastructure resilience, and policy decisions for mitigating climate-related disruptions.  
+As evident, the Northeast region experiences the most outages, whereas the West North Central region experiences the least outages.
 
 
 
