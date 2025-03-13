@@ -93,7 +93,7 @@ The first few rows of our DataFrame `outage` look like this:
 
 ## Exploratory Data Analysis
 
-### Univariate Analysis
+### **Univariate Analysis**
 
 #### 1. <u>Frequency of Power Outages Across Climate Regions  </u>
 
