@@ -18,21 +18,19 @@ This predictive capability could help power companies anticipate issues, allocat
 
 | Variable Name                | Description |
 |------------------------------|-------------|
-| YEAR                         | The year when the outage event occurred |
-| U.S._STATE                   | The state when the outage event occurred |
-| NERC.REGION                  | The North American Electric Reliability Corporation (NERC) regions involved in the outage event |
-| CLIMATE.REGION               | U.S. Climate regions as specified by National Centers for Environmental Information (nine climatically consistent regions in continental U.S.A.) |
-| ANOMALY.LEVEL                | Represents the oceanic El Niño/La Niña (ONI) index referring to the cold and warm episodes by season |
-| CLIMATE.CATEGORY             | Represents the climate episodes corresponding to the years |
-| OUTAGE.START.DATE            | Indicates the day of the year when the outage event started (as reported by the corresponding Utility in the region) |
-| OUTAGE.START.TIME            | Indicates the time of the day when the outage event started (as reported by the corresponding Utility in the region) |
-| OUTAGE.RESTORATION.DATE      | Indicates the day of the year when power was restored to all customers (as reported by the corresponding Utility in the region) |
-| OUTAGE.RESTORATION.TIME      | Indicates the time of the day when power was restored to all customers (as reported by the corresponding Utility in the region) |
-| CAUSE.CATEGORY               | Categories of all the events causing major power outages |
-| CAUSE.CATEGORY.DETAIL        | Detailed description of the event categories causing major power outages |
-| OUTAGE.DURATION              | Duration of outage events (in minutes) |
-| DEMAND.LOSS.MW               | Amount of peak demand lost during an outage event (in Megawatt)|
-| CUSTOMERS.AFFECTED           | Number of customers affected by the power outage event |
+| year                         | The year when the outage event occurred |
+| state                  | The state when the outage event occurred |
+| nerc                  | The North American Electric Reliability Corporation (NERC) regions involved in the outage event |
+| climate_region               | U.S. Climate regions as specified by National Centers for Environmental Information |
+| anomaly_level                | Represents the oceanic El Niño/La Niña (ONI) index referring to the cold and warm episodes by season |
+| climate_category             | Represents the climate episodes corresponding to the years |
+| outage_start_timestamp           | Indicates the date and time when the outage event started |
+| restoration_timestamp    | Indicates the date and time when power was restored to all customers |
+| cause               | Categories of all the events causing major power outages |
+| cause_detail        | Detailed description of the event categories causing major power outages |
+| duration             | Duration of outage events (in minutes) |
+| demand_loss              | Amount of peak demand lost during an outage event (in Megawatt)|
+| customers_affected          | Number of customers affected by the power outage event |
 
 
 
