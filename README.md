@@ -99,7 +99,7 @@ The first few rows of our DataFrame `outage` look like this:
 
 The bar chart illustrates the frequency of power outages across different climate regions, providing insight into how often outages occur in each area. The height of each bar represents the number of recorded outage events, making it easy to compare the distribution across regions. Regions with higher frequencies may experience more frequent extreme weather conditions, such as hurricanes, heavy snowfall, or heatwaves, which could contribute to power disruptions. Conversely, regions with lower frequencies may have more stable climates or resilient infrastructure.  
 
-As evident, the Northeast region experiences the most outages, whereas the West North Central region experiences the least outages.
+As evident, the **Northeast region** experiences the most outages, whereas the **West North Central region** experiences the least outages.
 
 <iframe
   src="images/figure_3.html"
@@ -108,5 +108,17 @@ As evident, the Northeast region experiences the most outages, whereas the West 
   frameborder="0"
 ></iframe>
 
+#### 2. <u>Distribution of Power Outage Causes </u>
+
+The pie chart illustrates the distribution of power outages based on different cause categories, showing the proportion of outages attributed to each factor. Each slice represents a specific cause, with its size corresponding to the frequency of outages in that category. This visualization provides a clear overview of the primary reasons for power disruptions, such as extreme weather events, equipment failures, human errors, or other environmental factors.  
+
+By analyzing the distribution, we can identify that **severe weather** is the major cause of power outages, accounting for almost **49.7%** of them, followed by **intentional attack** with **27.2%**.
+
+<iframe
+  src="images/figure_4.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
