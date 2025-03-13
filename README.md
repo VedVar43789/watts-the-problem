@@ -14,7 +14,27 @@ This project analyzes historical outage data (1540 rows × 57 columns) to develo
 The focus of this project is on the following question:
 **"Developing a machine learning model that can predict outage causes based on real-time factors."**
 
-This predictive capability could help power companies anticipate issues, allocate resources more effectively, and minimize disruption.
+This predictive capability could help power companies anticipate issues, allocate resources more effectively, and minimize disruption. The description of the relevent variables is as follows:
+
+| Variable Name                | Description |
+|------------------------------|-------------|
+| YEAR                         | The year when the outage event occurred |
+| U.S._STATE                   | The state when the outage event occurred |
+| NERC.REGION                  | The North American Electric Reliability Corporation (NERC) regions involved in the outage event |
+| CLIMATE.REGION               | U.S. Climate regions as specified by National Centers for Environmental Information (nine climatically consistent regions in continental U.S.A.) |
+| ANOMALY.LEVEL                | Represents the oceanic El Niño/La Niña (ONI) index referring to the cold and warm episodes by season |
+| CLIMATE.CATEGORY             | Represents the climate episodes corresponding to the years |
+| OUTAGE.START.DATE            | Indicates the day of the year when the outage event started (as reported by the corresponding Utility in the region) |
+| OUTAGE.START.TIME            | Indicates the time of the day when the outage event started (as reported by the corresponding Utility in the region) |
+| OUTAGE.RESTORATION.DATE      | Indicates the day of the year when power was restored to all customers (as reported by the corresponding Utility in the region) |
+| OUTAGE.RESTORATION.TIME      | Indicates the time of the day when power was restored to all customers (as reported by the corresponding Utility in the region) |
+| CAUSE.CATEGORY               | Categories of all the events causing major power outages |
+| CAUSE.CATEGORY.DETAIL        | Detailed description of the event categories causing major power outages |
+| OUTAGE.DURATION              | Duration of outage events (in minutes) |
+| DEMAND.LOSS.MW               | Amount of peak demand lost during an outage event (in Megawatt)|
+| CUSTOMERS.AFFECTED           | Number of customers affected by the power outage event |
+
+
 
 
 
