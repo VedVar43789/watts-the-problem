@@ -95,7 +95,7 @@ The first few rows of our DataFrame `outage` look like this:
 
 ### Univariate Analysis
 
-#### <u>Frequency of Power Outages Across Climate Regions  </u>
+#### 1. <u>Frequency of Power Outages Across Climate Regions  </u>
 
 The bar chart illustrates the frequency of power outages across different climate regions, providing insight into how often outages occur in each area. The height of each bar represents the number of recorded outage events, making it easy to compare the distribution across regions. Regions with higher frequencies may experience more frequent extreme weather conditions, such as hurricanes, heavy snowfall, or heatwaves, which could contribute to power disruptions. Conversely, regions with lower frequencies may have more stable climates or resilient infrastructure.  
 
