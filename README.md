@@ -101,5 +101,12 @@ The bar chart illustrates the frequency of power outages across different climat
 
 As evident, the Northeast region experiences the most outages, whereas the West North Central region experiences the least outages.
 
+<iframe
+  src="images/figure_3.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
