@@ -152,7 +152,7 @@ This **bivariate analysis** using the box plot visualizes the relationship betwe
 We have created a pivot table to analyze the relationship between climate conditions and power outage duration, where the average outage duration is calculated for each combination of `climate_category` (such as cold, warm, or normal) and `climate_region` (geographical climate zones). This allows for a structured comparison of outage duration across different climate conditions.
 
 
-| climate_category \ climate_region | Central    | East North Central | Northeast  | Northwest  | South      | Southeast  | Southwest  | West       | West North Central |
+| climate_category | Central    | East North Central | Northeast  | Northwest  | South      | Southeast  | Southwest  | West       | West North Central |
 |-----------------------------------|-----------|-------------------|------------|------------|------------|------------|------------|------------|-------------------|
 | cold                              | 2676.338235 | 6568.789474       | 3568.766129 | 874.680851 | 1977.403509 | 1707.066667 | 499.208333  | 1735.171875 | 200.000000        |
 | normal                            | 2682.147059 | 5207.710843       | 2261.327778 | 733.612245 | 3685.441441 | 2392.267606 | 283.260870  | 1142.322581 | 28.428571         |
