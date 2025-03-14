@@ -218,3 +218,40 @@ We used TVD (Total Variation Distance) for our observed test statistic, which wa
 ></iframe>
 
 
+## Hypothesis Testing
+
+### Analysis of the Difference in Mean Customers Affected by Power Outages in Texas and Washington
+
+We aim to determine whether the **number of customers affected by power outages** is greater on average in **Texas** compared to **Washington**. The relevant columns for this test are **`customers_affected`** and **`state`**. We will only be using data from outages that occurred in Texas or Washington.
+
+- **Null Hypothesis:** There is no difference in the mean number of customers affected by the power outages in the states Texas and Washington.  
+- **Alternative Hypothesis:** The mean number of customers affected by the power outages in the state of Texas is greater than that in Washington.
+
+### Test Statistic:
+The **difference in means**, specifically:  
+\[
+\text{Mean(Customers Affected in Texas)} - \text{Mean(Customers Affected in Washington)}
+\]
+
+### Methodology:
+We performed a **permutation test with 10,000 simulations** to generate an empirical distribution of the test statistic under the null hypothesis. In each permutation, the `customers_affected` values were shuffled while keeping the state labels fixed. This allowed me to assess how likely the observed difference would occur by random chance.
+
+### Results:
+
+- **Observed difference in means:** 118984.25602727494` 
+- **p-value:** 0.0001 
+
+With a standard significance level of **0.05**, the p-value is sufficiently small, allowing us to **reject the null hypothesis**. This suggests that the number of customers affected by outages in Texas is significantly higher on average compared to Washington.
+
+### Visualization:
+The plot below shows the distribution of permuted differences, with the observed difference marked as a dashed red line. 
+
+<iframe
+  src="images/figure_15.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
+
