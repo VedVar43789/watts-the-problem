@@ -186,10 +186,32 @@ To test missingness dependency, we will focus on the distribution of `customers_
   frameborder="0"
 ></iframe>
 
-We used TVD (Total Variation Distance) for our observed test statistic, which was found to be **0.557**. Whereas, our p-value was found to be **0.001** after conduction a permutation test with 500 repetitions. Since our p-value is much below the standard significance level of 0.05, we **reject the null hypothesis in favour of the alternative hypothesis**, which means that the distribution of outage causes differs based on whether the `customers_affected` value is missing or not, and hence, the missingness of `customers_affected` is dependent on `cause`.
+We used TVD (Total Variation Distance) for our observed test statistic, which was found to be **0.557**. Whereas, our p-value was found to be **0.001** after conducting a permutation test with 500 repetitions. Since our p-value is much below the standard significance level of 0.05, we **reject the null hypothesis in favour of the alternative hypothesis**, which means that the distribution of outage causes differs based on whether the `customers_affected` value is missing or not, and hence, the missingness of `customers_affected` is **dependent** on `cause`.
 
 <iframe
   src="images/figure_10.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+### <b>2. customers_affected vs climate_category</b>
+
+**Null Hypothesis:** The distribution of `climate_category` is independent of whether the `customers_affected` value is missing or not.
+
+**Alternative Hypothesis:** The distribution of `climate_category` differs based on whether the `customers_affected` value is missing or not. 
+
+<iframe
+  src="images/figure_12.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+We used TVD (Total Variation Distance) for our observed test statistic, which was found to be **0.036**. Whereas, our p-value was found to be **0.366** after conducting a permutation test with 500 repetitions. Since our p-value is much above the standard significance level of 0.05, we **fail to reject the null hypothesis**, which means that the distribution of `climate_category` is independent of whether the `customers_affected` value is missing or not, and hence, the missingness of `customers_affected` is **not dependent** on `climate_category`.
+
+<iframe
+  src="images/figure_13.html"
   width="800"
   height="600"
   frameborder="0"
