@@ -151,12 +151,13 @@ This **bivariate analysis** using the box plot visualizes the relationship betwe
 
 We have created a pivot table to analyze the relationship between climate conditions and power outage duration, where the average outage duration is calculated for each combination of `climate_category` (such as cold, warm, or normal) and `climate_region` (geographical climate zones). This allows for a structured comparison of outage duration across different climate conditions.
 
-<iframe
-  src="images/figure_7.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+
+| climate_category \ climate_region | Central    | East North Central | Northeast  | Northwest  | South      | Southeast  | Southwest  | West       | West North Central |
+|-----------------------------------|-----------|-------------------|------------|------------|------------|------------|------------|------------|-------------------|
+| cold                              | 2676.338235 | 6568.789474       | 3568.766129 | 874.680851 | 1977.403509 | 1707.066667 | 499.208333  | 1735.171875 | 200.000000        |
+| normal                            | 2682.147059 | 5207.710843       | 2261.327778 | 733.612245 | 3685.441441 | 2392.267606 | 283.260870  | 1142.322581 | 28.428571         |
+| warm                              | 2080.896552 | 3022.117647       | 3990.311111 | 2212.555556 | 1672.101695 | 2528.941176 | 5127.681818 | 1942.016667 | 2486.500000       |
+
 
 As evident, East North Central experiences the highest impact during cold and normal conditions, suggesting grid vulnerabilities in harsh weather. The Southwest faces the most disruption in warm conditions, likely due to extreme heat and increased energy demand. In contrast, West North Central remains the most resilient, with minimal average disruptions across all climate conditions.
 
