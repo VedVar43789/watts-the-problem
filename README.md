@@ -255,9 +255,113 @@ The plot below shows the distribution of permuted differences, with the observed
 
 ## Framing a Prediction Problem
 
+Our model will try to predict the **climate category** of a power outage. This will be a **binary classification** problem because we are only focusing on outages occurring in either `"normal"` or `"cold"` climate conditions.  
+
+The metric I am using to evaluate my model is **accuracy**, as the dataset appears to be balanced, making accuracy a reasonable measure of overall performance. However, I will also consider **precision, recall, and F1-score** to ensure the model is not biased toward one class, especially if class imbalance exists.  
+
+At the time of prediction, we would know the **state, climate region, cause of outage, number of customers affected, and outage duration**. These features are available at the time of an outage and can be used to classify whether the climate conditions at the time were `"normal"` or `"cold"`.
+
 ## Baseline Model
 
+Our model is a **binary classifier** that predicts the climate category of a power outage as either **"normal"** or **"cold"**. Understanding the climate category of an outage could help energy companies anticipate seasonal disruptions and optimize resource allocation for infrastructure resilience. The model is built using a **Random Forest Classifier**, with numerical and categorical features properly preprocessed.
+
+
+### Features Used in the Model
+
+#### **Quantitative Features (Numerical)**
+
+- **customers_affected**: The number of customers impacted by the outage.
+
+- **duration**: The length of the outage in hours.
+
+
+**Preprocessing:**
+
+- Missing values were imputed using the **median strategy**.
+
+- Features were **standardized** using `StandardScaler` to normalize them.
+
+#### **Nominal Features (Categorical)**
+
+- **state**: The state where the outage occurred.
+
+- **climate_region**: The broader climate classification of the region.
+
+- **cause**: The reason for the power outage.
+
+**Preprocessing:**
+
+- Missing values were imputed with **"Unknown"** using `SimpleImputer`.
+
+- Categories were **one-hot encoded** using `OneHotEncoder`, ensuring that unseen values during testing wouldn’t cause issues.
+
+
+### **Target Variable**
+
+- **climate_category** encoded as:
+
+  - `1` for **"cold"**
+
+  - `0` for **"normal"**
+
+
+### **Model Performance**
+
+- **Train Accuracy**: **0.9877**
+
+- **Test Accuracy**: **0.6066**
+
+- **Classification Report**:
+
+  - **Cold**: Precision = 0.49, Recall = 0.39, F1-score = 0.44
+
+  - **Normal**: Precision = 0.66, Recall = 0.74, F1-score = 0.70
+
+### **Analysis**
+
+While the train accuracy is high, indicating that the model may be overfitting, the **test accuracy** of 0.6066 suggests poor generalization to new data. The **low recall for the "cold" category** indicates that the model is not effectively identifying severe weather-induced outages. Additionally, the **imbalanced classes** could be contributing to the model's weaker performance, as the model appears to favor predicting "normal" outages.
+
+### **Steps to improve the model:**
+
+1. **Hyperparameter tuning** will be employed using **GridSearchCV** to optimize the model's complexity.
+
+2. **Feature engineering** will be applied to include more time-based features and refine the data input.
+
+3. **Class imbalance** will be addressed to improve performance for both classes, especially "cold" outages.
+
+
 ## Final Model
+
+### **Modeling Algorithm**
+
+For the final model, we kept the **RandomForestClassifier**, as it is an ensemble learning method that helps in reducing overfitting and improving predictive accuracy by aggregating the results from multiple decision trees. Random forests are particularly well-suited for complex datasets with both categorical and numerical features, as they can effectively capture non-linear relationships and interactions between features.
+
+### **Feature Engineering and Selection**
+
+The final model included several **key features** that we believe significantly contribute to the predictive power of the model:
+
+- **`duration_hours`** and **`recovery_time_hours`**: These time-related features help the model capture the length of outages and recovery times, providing important context for both normal and cold weather-related outages.
+
+- **`outage_month`**, **`outage_dayofyear`**, and **`outage_weekday`**: These features capture the seasonal and temporal patterns in outages. They are especially important as certain months, days, or seasons could be more prone to specific types of weather disruptions (e.g., winter storms leading to cold-related outages).
+
+- **Categorical features like `state`, `climate_region`, `cause`, and `nerc`**: These provide regional and cause-specific context, which is crucial for understanding how weather and infrastructure influence power outages.
+
+These features, particularly the time-based and regional ones, help the model better understand the environmental and seasonal factors that drive power outages, improving its ability to predict outages under various conditions.
+
+### **Hyperparameter Tuning**
+
+To optimize the performance of the RandomForestClassifier, we used **GridSearchCV** to tune the hyperparameters:
+
+- **`n_estimators`**: 500 trees for greater model stability and improved accuracy.
+
+- **`max_depth`**: Set to 5 to avoid overfitting and ensure the trees remain generalizable.
+
+- **`min_samples_split`**: Set to 40 to avoid overly fine splits that would lead to overfitting.
+
+- **`min_samples_leaf`**: Set to 25 to ensure that each leaf node contains a sufficient number of samples, improving robustness.
+
+
+Since this is a fairly balanced dataset for our prediction problem, we have used accuracy along with some other classification report metrics to rate our model. The final model achieved a test accuracy of **75.41%** and a balanced classification performance, with an F1 score of **0.75**, improving on the baseline model’s performance. Compared to the baseline, which had lower accuracy and recall for the "cold" class, the final model shows a more robust performance across both classes, particularly with higher recall for the "normal" class (85%). Additionally, the model’s cross-validation accuracy of **74.28%** indicates better generalization and stability. This improvement suggests that the adjustments made, including feature selection and hyperparameter tuning, contributed to a more reliable and efficient model.l.
 
 ## Fairness Analysis
 
