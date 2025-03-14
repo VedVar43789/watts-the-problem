@@ -202,7 +202,7 @@ We used TVD (Total Variation Distance) for our observed test statistic, which wa
 **Alternative Hypothesis:** The distribution of `climate_category` differs based on whether the `customers_affected` value is missing or not. 
 
 <iframe
-  src="images/figure_12.html"
+  src="images/figure_13.html"
   width="800"
   height="600"
   frameborder="0"
@@ -211,7 +211,7 @@ We used TVD (Total Variation Distance) for our observed test statistic, which wa
 We used TVD (Total Variation Distance) for our observed test statistic, which was found to be **0.036**. Whereas, our p-value was found to be **0.366** after conducting a permutation test with 500 repetitions. Since our p-value is much above the standard significance level of 0.05, we **fail to reject the null hypothesis**, which means that the distribution of `climate_category` is independent of whether the `customers_affected` value is missing or not, and hence, the missingness of `customers_affected` is **not dependent** on `climate_category`.
 
 <iframe
-  src="images/figure_13.html"
+  src="images/figure_12.html"
   width="800"
   height="600"
   frameborder="0"
