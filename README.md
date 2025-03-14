@@ -162,3 +162,21 @@ We have created a pivot table to analyze the relationship between climate condit
 As evident, East North Central experiences the highest impact during cold and normal conditions, suggesting grid vulnerabilities in harsh weather. The Southwest faces the most disruption in warm conditions, likely due to extreme heat and increased energy demand. In contrast, West North Central remains the most resilient, with minimal average disruptions across all climate conditions.
 
 
+## Assessment of Missingness
+
+### **NMAR Analysis**
+
+In our dataset, the `customers_affected` column could potentially be **Not Missing at Random (NMAR)**. This is because the missing values in this column might depend on the severity of the outage or reporting practices rather than being randomly missing. For example, smaller outages affecting fewer customers might be less likely to be reported accurately, whereas larger outages may have more complete data due to higher scrutiny and impact.  
+
+To determine if `customers_affected` is truly NMAR, we would need additional data, such as utility company reporting policies, regional reporting standards, or manual record-keeping biases. If we can obtain external data explaining why some values are missing—such as a pattern in which certain companies or states systematically fail to report small-scale outages—then the missingness could instead be classified as **Missing at Random (MAR)** rather than NMAR.
+
+### **Missingness Dependency**
+To test missingness dependency, we will focus on the distribution of `customers_affected`. We will test this against the columns `cause` and `climate_category`.
+
+### <b>1. customers_affected vs cause</b>
+
+**Null Hypothesis:** The distribution of outage causes is independent of whether the `customers_affected` value is missing or not.
+
+**Alternative Hypothesis:** The distribution of outage causes differs based on whether the `customers_affected` value is missing or not. 
+
+
