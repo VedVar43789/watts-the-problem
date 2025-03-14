@@ -229,16 +229,15 @@ We aim to determine whether the **number of customers affected by power outages*
 
 ### Test Statistic:
 The **difference in means**, specifically:  
-\[
-\text{Mean(Customers Affected in Texas)} - \text{Mean(Customers Affected in Washington)}
-\]
+
+*Mean(Customers Affected in Texas) - Mean(Customers Affected in Washington)*
 
 ### Methodology:
 We performed a **permutation test with 10,000 simulations** to generate an empirical distribution of the test statistic under the null hypothesis. In each permutation, the `customers_affected` values were shuffled while keeping the state labels fixed. This allowed me to assess how likely the observed difference would occur by random chance.
 
 ### Results:
 
-- **Observed difference in means:** 118984.25602727494` 
+- **Observed difference in means:** 118984.25602727494
 - **p-value:** 0.0001 
 
 With a standard significance level of **0.05**, the p-value is sufficiently small, allowing us to **reject the null hypothesis**. This suggests that the number of customers affected by outages in Texas is significantly higher on average compared to Washington.
