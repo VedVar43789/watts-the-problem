@@ -123,7 +123,7 @@ By analyzing the distribution, we can identify that **severe weather** is the ma
 
 #### 1. <u>Impact of Climate Region on Outage Duration  </u>
 
-This plot visualizes the relationship between climate region and outage duration. Each point represents an outage, with the x-axis showing the climate region and the y-axis representing the duration of the outage. Different colors distinguish the climate regions, making it easier to identify patterns. 
+This **scatter plot** visualizes the relationship between climate region and outage duration. Each point represents an outage, with the x-axis showing the climate region and the y-axis representing the duration of the outage. Different colors distinguish the climate regions, making it easier to identify patterns. 
 
 <iframe
   src="images/figure_5.html"
@@ -134,7 +134,7 @@ This plot visualizes the relationship between climate region and outage duration
 
 #### 2. <u>Impact of Climate Category on Anomaly Level </u>
 
-This bivariate analysis using the box plot visualizes the relationship between **Climate Category** and **Anomaly Level**. The x-axis represents different climate categories, while the y-axis shows the distribution of anomaly levels within each category. Here are some key observations:
+This **bivariate analysis** using the box plot visualizes the relationship between **Climate Category** and **Anomaly Level**. The x-axis represents different climate categories, while the y-axis shows the distribution of anomaly levels within each category. Here are some key observations:
 
 - Normal Climate: The anomaly levels are centered around zero, with a relatively narrow interquartile range (IQR), indicating lower variability.
 - Cold Climate: The anomaly levels are mostly negative, suggesting that colder conditions are associated with lower anomaly levels. The spread is slightly larger, with some extreme values on the lower end.
@@ -146,5 +146,18 @@ This bivariate analysis using the box plot visualizes the relationship between *
   height="600"
   frameborder="0"
 ></iframe>
+
+### **Interesting Aggregates**
+
+We have created a pivot table to analyze the relationship between climate conditions and power outage duration, where the average outage duration is calculated for each combination of `climate_category` (such as cold, warm, or normal) and `climate_region` (geographical climate zones). This allows for a structured comparison of outage duration across different climate conditions.
+
+<iframe
+  src="images/figure_7.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+As evident, East North Central experiences the highest impact during cold and normal conditions, suggesting grid vulnerabilities in harsh weather. The Southwest faces the most disruption in warm conditions, likely due to extreme heat and increased energy demand. In contrast, West North Central remains the most resilient, with minimal average disruptions across all climate conditions.
 
 
