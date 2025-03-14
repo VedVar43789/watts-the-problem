@@ -119,4 +119,32 @@ By analyzing the distribution, we can identify that **severe weather** is the ma
   frameborder="0"
 ></iframe>
 
+### **Bivariate Analysis**
+
+#### 1. <u>Impact of Climate Region on Outage Duration  </u>
+
+This plot visualizes the relationship between climate region and outage duration. Each point represents an outage, with the x-axis showing the climate region and the y-axis representing the duration of the outage. Different colors distinguish the climate regions, making it easier to identify patterns. 
+
+<iframe
+  src="images/figure_5.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+#### 2. <u>Impact of Climate Category on Anomaly Level </u>
+
+This bivariate analysis using the box plot visualizes the relationship between **Climate Category** and **Anomaly Level**. The x-axis represents different climate categories, while the y-axis shows the distribution of anomaly levels within each category. Here are some key observations:
+
+- Normal Climate: The anomaly levels are centered around zero, with a relatively narrow interquartile range (IQR), indicating lower variability.
+- Cold Climate: The anomaly levels are mostly negative, suggesting that colder conditions are associated with lower anomaly levels. The spread is slightly larger, with some extreme values on the lower end.
+- Warm Climate: The anomaly levels tend to be positive, with a higher median compared to other categories. There is a larger spread, and a few potential outliers indicate extreme anomaly levels.
+
+<iframe
+  src="images/figure_6.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
