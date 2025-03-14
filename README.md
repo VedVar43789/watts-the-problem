@@ -266,7 +266,7 @@ At the time of prediction, we would know the **state, climate region, cause of o
 Our model is a **binary classifier** that predicts the climate category of a power outage as either **"normal"** or **"cold"**. Understanding the climate category of an outage could help energy companies anticipate seasonal disruptions and optimize resource allocation for infrastructure resilience. The model is built using a **Random Forest Classifier**, with numerical and categorical features properly preprocessed.
 
 
-### Features Used in the Model
+### <u>Features Used in the Model:</u>
 
 #### **Quantitative Features (Numerical)**
 
@@ -275,7 +275,7 @@ Our model is a **binary classifier** that predicts the climate category of a pow
 - **duration**: The length of the outage in hours.
 
 
-**Preprocessing:**
+Preprocessing:
 
 - Missing values were imputed using the **median strategy**.
 
@@ -289,23 +289,20 @@ Our model is a **binary classifier** that predicts the climate category of a pow
 
 - **cause**: The reason for the power outage.
 
-**Preprocessing:**
+Preprocessing:
 
 - Missing values were imputed with **"Unknown"** using `SimpleImputer`.
 
 - Categories were **one-hot encoded** using `OneHotEncoder`, ensuring that unseen values during testing wouldn’t cause issues.
 
 
-### **Target Variable**
 
-- **climate_category** encoded as:
+### Target Variable:
 
-  - `1` for **"cold"**
-
-  - `0` for **"normal"**
+- **climate_category** was encoded as `1` for **"cold"** and `o` for **"normal"**.
 
 
-### **Model Performance**
+### Model Performance and Analysis
 
 - **Train Accuracy**: **0.9877**
 
@@ -317,11 +314,10 @@ Our model is a **binary classifier** that predicts the climate category of a pow
 
   - **Normal**: Precision = 0.66, Recall = 0.74, F1-score = 0.70
 
-### **Analysis**
 
 While the train accuracy is high, indicating that the model may be overfitting, the **test accuracy** of 0.6066 suggests poor generalization to new data. The **low recall for the "cold" category** indicates that the model is not effectively identifying severe weather-induced outages. Additionally, the **imbalanced classes** could be contributing to the model's weaker performance, as the model appears to favor predicting "normal" outages.
 
-### **Steps to improve the model:**
+### Possible Improvements:
 
 1. **Hyperparameter tuning** will be employed using **GridSearchCV** to optimize the model's complexity.
 
