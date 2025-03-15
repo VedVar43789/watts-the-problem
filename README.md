@@ -376,9 +376,9 @@ The evaluation metric used is precision, specifically the weighted precision, wh
 The p-value is computed by comparing the absolute observed precision difference (calculated from the actual data) to the distribution of absolute precision differences from the 500 permutations. Since our p-value is **0.108**, which is above the standard significance level, we **fail to reject the null hypothesis**. This means that there is no statistically significant difference in precision between high-affected and low-affected customer groups, suggesting that the model performs equally well across both groups. Therefore, we conclude that our model seems to be fair with respect to the precision metric.
 
 <iframe
-  src="images/fig100.html"
-  width="1202"
-  height="900"
+  src="images/fig101.html"
+  width="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
