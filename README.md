@@ -361,3 +361,24 @@ Since this is a fairly balanced dataset for our prediction problem, we have used
 
 ## Fairness Analysis
 
+Our groups for the fairness analysis are high-affected vs low-affected customer groups, defined as outages that impact more than 60,000 customers (high impact) versus those that affect fewer than 60,000 customers (low impact).
+
+We chose these groups because the severity of the outage (in terms of customer impact) could influence the accuracy of the model’s predictions for the climate category. It's important to ensure that the model performs equally well across both groups to avoid potential bias.
+
+The evaluation metric used is precision, specifically the weighted precision, which calculates the proportion of true positive predictions relative to all positive predictions, giving weight to the size of each class. This metric was chosen because it focuses on minimizing false positives, which is important in ensuring that the model is making reliable and correct positive predictions across different groups. Unfairness in this could lead to significant misinterpretations or costly decisions. We will use permutation tests to calculate the precision for high-affected vs low-affected customer groups (that are randomly shuffled), keeping a standard significance level of **0.05** (5%).
+
+- **Null Hypothesis:** The model is fair. Its precision for high-affected and low-affected customer groups is roughly the same, and any difference is due to random chance.
+
+- **Alternative Hypothesis :** The model is unfair. Its precision for high-affected customer groups is significantly different from the accuracy for low-affected customer groups.
+
+**Test Statistic:** Absolute difference in means
+
+The p-value is computed by comparing the absolute observed precision difference (calculated from the actual data) to the distribution of absolute precision differences from the 500 permutations. Since our p-value is **0.108**, which is above the standard significance level, we **fail to reject the null hypothesis**. This means that there is no statistically significant difference in precision between high-affected and low-affected customer groups, suggesting that the model performs equally well across both groups. Therefore, we conclude that our model seems to be fair with respect to the precision metric.
+
+<iframe
+  src="images/figure_15.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
