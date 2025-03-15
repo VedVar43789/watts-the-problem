@@ -377,8 +377,7 @@ The p-value is computed by comparing the absolute observed precision difference 
 
 <iframe
   src="images/fig100.html"
-  width="800"
-  height="600"
+
   frameborder="0"
 ></iframe>
 
